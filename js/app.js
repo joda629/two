@@ -32,7 +32,6 @@ for(let i =0 ; i< add.length;i++)
         {
             let info=e.target.parentElement.parentElement.parentElement
 
-            alert("hey")
             data=
             {
                 title : info.children[0].children[0].textContent,
