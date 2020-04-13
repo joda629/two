@@ -4,23 +4,16 @@
     padding     : 0;
     box-sizing  : border-box;
     font-family : 'Shadows Into Light', cursive;
-    color       : #ccffff;
+    color       : #879191;
+    color:       chartreuse;
 }
 
-img 
-{
-     height             : auto;
-}
 
 body 
 {
     background-color        : #222;
 }
 
-.app 
-{
-
-}
 
 .header 
 {
@@ -29,22 +22,82 @@ body
     justify-content     : space-between;
     padding             : 0 .5rem  ;
     margin-bottom       : 1rem;
-    
-    & > *
+    position            : relative;
+
+
+    & .box__car
     {
-        //border  : 2px solid red;
+        position        : absolute;
+        background-color  :#333; 
+        box-shadow: 0 0  3px 1px chartreuse;
+        border-radius   : .5rem;
+        width           : 250px;
+        min-height          : 250px;
+        right           : 11%;
+        top             : 2%;
+        transition      : all 1s linear;
+        display         : none;
+
+
+        & .close 
+        {
+            position        : absolute;
+            left            : 90%;
+            top             : -1%;
+            display: inline-block;
+            color           : chartreuse;
+            font-weight     : bold ;
+            font-size       : 1rem;
+            cursor          : pointer;
+        }
+
+
+
+        & .h2__car
+        {
+            width           : max-content;
+            //border          : 2px solid red;
+            margin          : 0 auto;
+        }
+
+        & .courses 
+        {
+            //border          : 2px solid red;
+            list-style      : none ;
+            width           : 90%;
+            margin          : 1rem auto;
+            padding         : .5rem;
+        }
     }
+
+
+    & .box__car::before 
+   {
+        content         : "";
+        display         : block ;
+        transform       :translate(248px, 5px) ;
+        width           : 0;
+        height          : 0;
+        //border-left     : 10px solid chartreuse;
+        //border-bottom   : 10px solid transparent;
+        //border-top      : 10px solid transparent;
+    }
+
+
+    
 
     & .figure__header 
     {
         //border          : 2px solid red;
-        & .img
+        
+        & .car
         {
-            //border      : 2px solid red;
+            //border      : 2px solid yellow;
             width       : 100%;
             height      : 100%;
             cursor      : pointer;
         }
+
     }
 }
 
